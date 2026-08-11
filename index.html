@@ -13,8 +13,8 @@
     <title>央央塔罗｜人民币服务</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./styles.css?v=cbba94f" />
-    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260811-pendulum" />
+    <script src="./app.js?v=20260811-pendulum" defer></script>
   </head>
   <body data-currency="rmb">
     <a class="skip-link" href="#main">跳到主要内容</a>
@@ -30,6 +30,7 @@
         </button>
         <nav class="site-nav" id="site-nav" aria-label="主要导航">
           <a href="#services">服务项目</a>
+          <a href="#pendulum-reference">灵摆项目</a>
           <a href="#feedback">真实反馈</a>
           <a href="#notes">预约须知</a>
           <a href="#contact">联系央央</a>
@@ -67,6 +68,20 @@
           <span>点击任一项目，可查看适用范围和具体说明。</span>
         </header>
         <div class="service-groups" id="service-groups"></div>
+      </section>
+
+      <section class="pendulum-reference section-shell" id="pendulum-reference" aria-labelledby="pendulum-reference-title">
+        <header class="section-heading reveal">
+          <p>灵摆调频主题</p>
+          <h2 id="pendulum-reference-title">所有可参考项目</h2>
+          <span data-pendulum-count>共 10 大主题，点击主题即可查看完整内容。</span>
+        </header>
+        <div class="pendulum-reference-toolbar reveal">
+          <p>不知道该选哪一项也没关系，预约时把情况告诉央央即可。</p>
+          <button id="pendulum-expand-all" type="button" aria-expanded="false">展开全部 <span aria-hidden="true">↓</span></button>
+        </div>
+        <div class="pendulum-topic-list" id="pendulum-topic-list"></div>
+        <p class="pendulum-disclaimer reveal">健康篇仅用于个人状态梳理与放松参考，不替代医疗检查、诊断或治疗。</p>
       </section>
 
       <section class="expertise" aria-labelledby="expertise-title">
