@@ -43,7 +43,7 @@ img { display: block; max-width: 100%; }
 .hero { min-height: calc(100svh - 78px); display: grid; grid-template-columns: minmax(440px, .88fr) 1.12fr; align-items: stretch; border-bottom: 1px solid var(--line); overflow: hidden; }
 .hero-copy { align-self: center; width: min(610px, calc(100% - 60px)); margin-left: max(36px, calc((100vw - 1320px) / 2)); padding: 80px 32px 80px 0; position: relative; z-index: 2; }
 .moon-phases { color: var(--gold); font-family: var(--serif); letter-spacing: .38em; font-size: 18px; margin-bottom: 28px; }
-.hero h1 { font-family: var(--serif); font-size: clamp(44px, 4.5vw, 74px); font-weight: 500; line-height: 1.32; letter-spacing: .02em; margin: 0 0 28px; }
+.hero h1 { margin: 0 0 28px; font-family: var(--serif); font-size: clamp(42px, 4vw, 68px); font-weight: 500; line-height: 1.35; letter-spacing: .015em; white-space: nowrap; }
 .hero-intro { max-width: 570px; color: var(--muted); font-family: var(--serif); font-size: 18px; letter-spacing: .04em; margin: 0 0 16px; }
 .included-note { display: inline-flex; align-items: center; gap: 9px; padding: 7px 0; color: var(--gold-deep); font-size: 14px; margin: 0; }
 .included-note span { color: var(--gold); }
