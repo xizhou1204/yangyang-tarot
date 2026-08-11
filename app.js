@@ -1,6 +1,16 @@
 const currency = document.body.dataset.currency || "rmb";
 
-const price = (rmb, myr) => (currency === "rmb" ? rmb : myr);
+const formatWholePrice = (value, symbol) => {
+  if (value == null) return "预约时确认";
+  const values = Array.isArray(value) ? value : [value];
+  return values.map((amount) => `${symbol}${Math.round(amount)}`).join("–");
+};
+
+const price = (rmb, myr) => (
+  currency === "rmb"
+    ? formatWholePrice(rmb, "¥")
+    : formatWholePrice(myr, "RM")
+);
 
 const services = [
   {
@@ -10,9 +20,9 @@ const services = [
     icon: "cards",
     detail: "塔罗擅长呈现问题里的情绪、动力、阻碍与选择。适合感情、事业、学业、友情、运势、桃花与寻人寻物等主题。",
     rows: [
-      { name: "单牌", note: "是／否、核心提示或其他牌阵补牌", price: price("¥10", "RM6") },
-      { name: "四张牌阵", note: "现状、关键、建议与发展方向", price: price("¥35", "RM20") },
-      { name: "六芒星或更大牌阵", note: "复杂问题与多层面深度分析", price: price("¥68–¥300", "预约时确认") },
+      { name: "单牌", note: "是／否、核心提示或其他牌阵补牌", price: price(10, 6) },
+      { name: "四张牌阵", note: "现状、关键、建议与发展方向", price: price(35, 20) },
+      { name: "六芒星或更大牌阵", note: "复杂问题与多层面深度分析", price: price([68, 300], null) },
     ],
   },
   {
@@ -22,9 +32,9 @@ const services = [
     icon: "clover",
     detail: "雷诺曼偏向现实事件与具体信息，适合关系现状、工作发展、行动结果、时间线与生活中的明确问题。",
     rows: [
-      { name: "单牌指引", note: "当天能量、核心提示或补牌", price: price("¥10", "RM6") },
-      { name: "四张牌阵", note: "问题关键、阻碍、建议与结果", price: price("¥35", "RM20") },
-      { name: "九宫格或其他牌阵", note: "全方位分析与复杂事件梳理", price: price("¥68–¥300", "预约时确认") },
+      { name: "单牌指引", note: "当天能量、核心提示或补牌", price: price(10, 6) },
+      { name: "四张牌阵", note: "问题关键、阻碍、建议与结果", price: price(35, 20) },
+      { name: "九宫格或其他牌阵", note: "全方位分析与复杂事件梳理", price: price([68, 300], null) },
     ],
   },
   {
@@ -34,10 +44,10 @@ const services = [
     icon: "pendulum",
     detail: "灵摆调频用于关系、状态、学业、事业与日常主题的阶段性梳理。可选吃苹果、桃花片、情绪、健康状态、小人祸、第三方、事业运、红鸾劫、考状元与财运滚滚等主题。",
     rows: [
-      { name: "单项快速调频", note: "一个核心状态或单项能量校准", price: price("¥10", "RM6") },
-      { name: "双项平衡／三维状态", note: "两至三个能量面向同步梳理", price: price("¥18–¥26", "RM10–RM15") },
-      { name: "四项主题调频", note: "围绕关系、事业、睡眠、财运等主题", price: price("¥35", "RM21") },
-      { name: "深度综合调频", note: "复杂卡顿、长期失衡与深度梳理", price: price("¥42–¥98", "RM26–RM60") },
+      { name: "单项快速调频", note: "一个核心状态或单项能量校准", price: price(10, 6) },
+      { name: "双项平衡／三维状态", note: "两至三个能量面向同步梳理", price: price([18, 26], [10, 15]) },
+      { name: "四项主题调频", note: "围绕关系、事业、睡眠、财运等主题", price: price(35, 21) },
+      { name: "深度综合调频", note: "复杂卡顿、长期失衡与深度梳理", price: price([42, 98], [26, 60]) },
     ],
   },
 ];
