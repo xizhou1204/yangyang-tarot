@@ -42,13 +42,123 @@ const services = [
     title: "灵摆调频",
     subtitle: "梳理当下卡点、情绪波动与能量状态",
     icon: "pendulum",
-    detail: "灵摆调频用于关系、状态、学业、事业与日常主题的阶段性梳理。可选吃苹果、桃花片、情绪、健康状态、小人祸、第三方、事业运、红鸾劫、考状元与财运滚滚等主题。",
+    detail: "灵摆调频用于关系、状态、学业、事业与日常主题的阶段性梳理。网站下方已经完整列出吃苹果、桃花片、情绪篇、健康篇、小人祸、第三方、事业运、红鸾劫、考状元与财运滚滚的全部参考细项。",
     rows: [
       { name: "单项快速调频", note: "一个核心状态或单项能量校准", price: price(10, 6) },
       { name: "双项平衡／三维状态", note: "两至三个能量面向同步梳理", price: price([18, 26], [10, 15]) },
       { name: "四项主题调频", note: "围绕关系、事业、睡眠、财运等主题", price: price(35, 21) },
       { name: "深度综合调频", note: "复杂卡顿、长期失衡与深度梳理", price: price([42, 98], [26, 60]) },
     ],
+  },
+];
+
+const pendulumTopics = [
+  {
+    title: "吃苹果",
+    groups: [{
+      items: [
+        "双方性愉悦指数", "双方性生活质量指数", "双方性持续时间指数", "双方性生活主动指数",
+        "双方性交流指数", "双方性花样质量指数", "双方性激情指数", "双方性冷淡指数",
+        "双方肾部能量指数", "双方性欲能量指数", "双方性生活和谐度", "双方身体能量指数",
+      ],
+    }],
+  },
+  {
+    title: "桃花片",
+    groups: [{
+      items: [
+        "受欢迎指数", "烂桃花指数", "正桃花指数", "对异性吸引指数",
+        "爱情贵人指数", "个人桃花频率", "爱情小人指数", "对异性吸引指数",
+        "个人魅力指数", "桃花障碍指数", "个人颜值指数", "认识新人机会指数",
+        "气质对频指数", "桃花质量指数", "正缘接近时间", "对方人品指数",
+      ],
+    }],
+  },
+  {
+    title: "情绪篇",
+    groups: [{
+      items: [
+        "烦躁指数", "悲观指数", "焦虑指数", "内耗指数", "紧张指数",
+        "生气指数", "心静指数", "积极指数", "安全感指数",
+      ],
+    }],
+  },
+  {
+    title: "健康篇",
+    groups: [{
+      items: ["抵抗力", "免疫力", "细菌感染", "躯体化", "肢体行动力", "炎症", "精神状态", "睡眠", "食欲"],
+    }],
+  },
+  {
+    title: "小人祸",
+    groups: [{
+      items: [
+        "对方对你的恶意频率", "对方对你的善意频率", "反弹对方伤害频率",
+        "小人情绪影响频率", "小人运势影响频率", "吸引小人接近频率",
+        "近期小人出现频率", "被对方伤害指数", "反弹小人伤害频率",
+      ],
+    }],
+  },
+  {
+    title: "第三方",
+    groups: [{
+      items: [
+        "对方身边第三方纠缠 yes or no", "第三方对于这段感情的负面影响指数",
+        "对方身边第三方出现频率", "其他异性对对方的吸引魅惑力指数", "对方身边第三方的回应频率",
+      ],
+    }],
+  },
+  {
+    title: "事业运",
+    groups: [{
+      items: [
+        "事业负能量指数", "与试题契合指数", "顾客信任度指数", "找工作指数", "客源量指数",
+        "客单量指数", "事业顺利指数", "上司提携指数", "业绩达标指数", "事业运指数",
+        "正能量指数", "成交率指数", "事业障碍指数", "事业贵人指数", "人际关系指数",
+        "事业小人指数", "面试幸运指数", "与客户／同事／上司和谐指数",
+        "面试通过指数", "与工作环境契合指数", "与面试官契合指数",
+      ],
+    }],
+  },
+  {
+    title: "红鸾劫",
+    groups: [{
+      items: [
+        "对方忠诚度", "对方心软度", "对方细节度", "感情沟通度", "心理距离度",
+        "对方执念度", "感情温馨度", "对方理性度", "感情复合度", "现实阻碍度",
+        "对方主动度", "对方感性度", "对方固执度", "感情激情度", "感情负能量",
+        "对方喜欢度", "对方花钱度", "对方想念度", "感情冷战度", "感情正能量",
+        "对方专一度", "对方关注度", "对方热情度", "感情吵架度", "在一起程度",
+      ],
+    }],
+  },
+  {
+    title: "考状元",
+    groups: [
+      {
+        label: "考前调频",
+        items: [
+          "细心度", "记忆力", "紧张度", "考试障碍度", "考试通过度", "考试顺利指数",
+          "自信心", "分析能力", "超常发挥", "临场发挥", "思维逻辑", "知识迁移",
+          "考试地点 vs 个案相合度", "监考老师 vs 个案相合度", "思考频率与出卷人一致度",
+          "受世界负面集体能量影响度", "审批卷老师 vs 个案相合度",
+        ],
+      },
+      {
+        label: "考后调频",
+        items: ["考试通过指数", "心态稳定指数", "考试合格度", "考试成绩指数", "考试排名指数", "好成绩障碍降低度"],
+      },
+    ],
+  },
+  {
+    title: "财运滚滚",
+    groups: [{
+      items: [
+        "顾客推荐度", "富婆接近指数", "金钱小人指数", "存钱指数",
+        "顾客回头率", "客源量指数", "顾客信任度", "与钱缘分率",
+        "金钱能量指数", "金钱好运指数", "金钱贵人指数", "顾客对你喜爱度",
+      ],
+    }],
   },
 ];
 
@@ -71,6 +181,7 @@ services.forEach((service, serviceIndex) => {
       <p>0${serviceIndex + 1}</p>
       <h3>${service.title}</h3>
       <span>${service.subtitle}</span>
+      ${service.id === "pendulum" ? '<a class="service-reference-link" href="#pendulum-reference">查看全部可参考项目 ↓</a>' : ""}
     </div>
     <div class="price-list">
       ${service.rows.map((row, rowIndex) => `
@@ -82,6 +193,54 @@ services.forEach((service, serviceIndex) => {
     </div>`;
   serviceGroups.append(section);
 });
+
+const pendulumTopicList = document.querySelector("#pendulum-topic-list");
+const pendulumExpandAll = document.querySelector("#pendulum-expand-all");
+
+if (pendulumTopicList) {
+  const totalItems = pendulumTopics.reduce(
+    (total, topic) => total + topic.groups.reduce((subtotal, group) => subtotal + group.items.length, 0),
+    0,
+  );
+  document.querySelectorAll("[data-pendulum-count]").forEach((item) => {
+    item.textContent = `共 ${pendulumTopics.length} 大主题、${totalItems} 个参考细项，点击主题即可查看完整内容。`;
+  });
+
+  pendulumTopics.forEach((topic, topicIndex) => {
+    const itemCount = topic.groups.reduce((total, group) => total + group.items.length, 0);
+    const details = document.createElement("details");
+    details.className = "pendulum-topic reveal";
+    details.open = topicIndex === 0;
+    details.innerHTML = `
+      <summary>
+        <span class="pendulum-topic-number">${String(topicIndex + 1).padStart(2, "0")}</span>
+        <strong>${topic.title}</strong>
+        <small>${itemCount} 项</small>
+        <i aria-hidden="true"></i>
+      </summary>
+      <div class="pendulum-topic-body">
+        ${topic.groups.map((group) => `
+          <div class="pendulum-topic-group">
+            ${group.label ? `<h3>${group.label}</h3>` : ""}
+            <ul>${group.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+          </div>
+        `).join("")}
+      </div>`;
+    pendulumTopicList.append(details);
+  });
+}
+
+if (pendulumExpandAll) {
+  pendulumExpandAll.addEventListener("click", () => {
+    const topics = [...document.querySelectorAll(".pendulum-topic")];
+    const shouldExpand = topics.some((topic) => !topic.open);
+    topics.forEach((topic) => { topic.open = shouldExpand; });
+    pendulumExpandAll.setAttribute("aria-expanded", String(shouldExpand));
+    pendulumExpandAll.innerHTML = shouldExpand
+      ? '收起全部 <span aria-hidden="true">↑</span>'
+      : '展开全部 <span aria-hidden="true">↓</span>';
+  });
+}
 
 document.querySelectorAll(".price-row").forEach((button) => {
   button.addEventListener("click", () => {
